@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Orb.it Planner</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #060d1a;
+    --surface: #0d1f35;
+    --accent: #38c9c0;
+    --accent2: #5b8dee;
+    --text: #e8f0f8;
+    --muted: #7a9ab8;
+    --border: rgba(56,201,192,0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Background orb effect */
+  body::before {
+    content: '';
+    position: fixed;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(56,201,192,0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    bottom: -200px;
+    left: -200px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(91,141,238,0.07) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 80px 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  header {
+    margin-bottom: 64px;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+
+  .orb {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #6dd5ff, #1a3c8a 60%, #0a1a3a);
+    box-shadow: 0 0 20px rgba(56,201,192,0.4), 0 0 40px rgba(56,201,192,0.15);
+    flex-shrink: 0;
+  }
+
+  .logo-text {
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text);
+    letter-spacing: -0.02em;
+  }
+
+  .logo-text span {
+    color: var(--accent);
+  }
+
+  h1 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3rem);
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    background: linear-gradient(135deg, var(--text) 40%, var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+  }
+
+  .meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .divider {
+    width: 48px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+    margin: 24px 0;
+  }
+
+  section {
+    margin-bottom: 48px;
+    padding: 32px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    animation: fadeUp 0.8s ease both;
+    position: relative;
+    overflow: hidden;
+  }
+
+  section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0.4;
+  }
+
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.2s; }
+  section:nth-child(4) { animation-delay: 0.3s; }
+  section:nth-child(5) { animation-delay: 0.4s; }
+  section:nth-child(6) { animation-delay: 0.5s; }
+  section:nth-child(7) { animation-delay: 0.6s; }
+
+  h2 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+  }
+
+  p {
+    color: var(--text);
+    opacity: 0.85;
+    margin-bottom: 12px;
+    font-size: 0.98rem;
+  }
+
+  p:last-child { margin-bottom: 0; }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(56,201,192,0.3);
+    transition: border-color 0.2s;
+  }
+
+  a:hover { border-color: var(--accent); }
+
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    animation: fadeUp 0.8s 0.7s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="logo">
+      <div class="orb"></div>
+      <div class="logo-text">Orb.it <span>Planner</span></div>
+    </div>
+    <h1>Privacy Policy</h1>
+    <div class="divider"></div>
+    <p class="meta">Last updated: April 5, 2026</p>
+  </header>
+
+  <section>
+    <h2>Overview</h2>
+    <p>Orb.it Planner ("we", "our", or "the app") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our iOS application.</p>
+    <p>We believe your personal goals are yours alone. We built Orb.it with privacy in mind from the ground up.</p>
+  </section>
+
+  <section>
+    <h2>Information We Collect</h2>
+    <p>Orb.it Planner stores your goals, tasks, and progress data locally on your device. We do not collect, transmit, or store your personal goal data on external servers.</p>
+    <p>If you use the Friends feature, only your display name and progress visibility settings are shared with users you explicitly connect with.</p>
+  </section>
+
+  <section>
+    <h2>How We Use Information</h2>
+    <p>Any data you enter into the app (goals, tasks, energy levels, orb designs) is used solely to provide the app's functionality on your device.</p>
+    <p>We do not sell, rent, or share your personal data with third parties for marketing purposes.</p>
+  </section>
+
+  <section>
+    <h2>Data Storage & Security</h2>
+    <p>Your data is stored locally on your iOS device using Apple's secure storage frameworks. You can delete all your data at any time by uninstalling the app.</p>
+  </section>
+
+  <section>
+    <h2>Third-Party Services</h2>
+    <p>Orb.it Planner does not currently integrate third-party analytics or advertising SDKs. If this changes in the future, this policy will be updated accordingly.</p>
+  </section>
+
+  <section>
+    <h2>Children's Privacy</h2>
+    <p>Orb.it Planner is not directed at children under the age of 13. We do not knowingly collect personal information from children.</p>
+  </section>
+
+  <section>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify users of any significant changes through the app or by updating the date at the top of this page.</p>
+  </section>
+
+  <section>
+    <h2>Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy, you can reach us at:</p>
+    <p><a href="https://wa.me/966564338882">WhatsApp Support</a> or <a href="mailto:shahad0x66@gmail.com">shahad0x66@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p>© 2026 Orb.it Planner · All rights reserved</p>
+  </footer>
+
+</div>
+</body>
+</html>
